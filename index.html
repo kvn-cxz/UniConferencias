@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conferencias Universitarias</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- ENCABEZADO -->
+    <header class="header">
+        <div class="header-container">
+
+            <a href="#" class="logo">
+                <span class="logo-icon">U</span>
+                <span>UniConferencias</span>
+            </a>
+
+            <nav class="navigation">
+                <a href="#" class="nav-link active">Conferencias</a>
+                <a href="#" class="nav-link">Calendario</a>
+                <a href="#" class="nav-link">Mi agenda</a>
+            </nav>
+
+            <button class="login-button" type="button">
+                Iniciar sesion
+            </button>
+
+        </div>
+    </header>
+    <!-- CONTENIDO PRINCIPAL -->
+    <main class="main-container">
+        <!-- PRESENTACION -->
+        <section class="hero">
+            <span class="eyebrow">EVENTOS ACADEMICOS</span>
+            <h1>Encuentra tu proxima conferencia</h1>
+            <p>
+                Explora las conferencias de tu universidad,
+                descubre nuevos temas y organiza tu horario.
+            </p>
+        </section>
+        <!-- BUSCADOR -->
+        <section class="search-section">
+            <label for="search" class="search-label">
+                Buscar conferencias
+            </label>
+            <div class="search-box">
+                <span class="search-icon" aria-hidden="true">⌕</span>
+                <input type="search" id="search" placeholder="Busca por nombre, tema o ponente...">
+                <button type="button" class="search-button">Buscar</button>
+            </div>
+        </section>
+        <!-- FILTROS -->
+        <section class="filters">
+            <div class="filter-group">
+                <label for="campus">Campus</label>
+                <select id="campus">
+                    <option value="">Todos los campus</option>
+                    <option value="">IIT</option>
+                    <option value="">IADA</option>
+                    <option value="">ICSA</option>
+                    <option value="">CU</option>
+                </select>
+            </div>
+            <div class="filter-group">
+                <label for="day">Dia</label>
+                <select id="day">
+                    <option value="">Todos los dias</option>
+                    <option value="lunes">Lunes</option>
+                    <option value="martes">Martes</option>
+                    <option value="miercoles">Miercoles</option>
+                    <option value="jueves">Jueves</option>
+                    <option value="viernes">Viernes</option>
+                </select>
+            </div>
+            <div class="filter-group">
+                <label for="category">Area academica</label>
+                <select id="category">
+                    <option value="">Todas las modalidades</option>
+                    <option value="tecnologia">Modalidad...</option>
+                    <option value="negocios">Modalidad...</option>
+                    <option value="ciencias">Modalidad...</option>
+                    <option value="diseno">Modalidad...</option>
+                </select>
+            </div>
+        </section>
+        <!-- LISTA DE CONFERENCIAS -->
+        <section class="conferences-section">
+            <div class="section-heading">
+                <div>
+                    <h2>Conferencias disponibles</h2>
+                    <p>
+                        Consulta los horarios y encuentra
+                        las actividades que te interesan.
+                    </p>
+                </div>
+                <span class="results-count">
+                    6 conferencias
+                </span>
+            </div>
+            <!-- TABLA CON TRES COLUMNAS -->
+            <div class="conference-list">
+                <!-- ENCABEZADOS -->
+                <div class="list-header">
+                    <span>Conferencia</span>
+                    <span>Campus / Ubicacion</span>
+                    <span>Horario</span>
+                </div>
+                <!-- CONFERENCIA 1 -->
+                <article class="conference-row">
+                    <div class="conference-info">
+                        <span class="category-tag technology">
+                            MODALIDAD
+                        </span>
+                        <h3>NOMBRE DE CONFERENCIA</h3>
+                        <p> Ponente: NOMBRE DEL PONENTE</p>
+                    </div>
+                    <div class="location-info">
+                        <strong>CAMPUS</strong>
+                        <span>LUGAR DEL CAMPUS</span>
+                    </div>
+                    <div class="time-info">
+                        <strong>HORA</strong>
+                        <span>DIA</span>
+                    </div>
+                </article>
+                <!-- CONFERENCIA 2 -->
+                <article class="conference-row">
+                    <div class="conference-info">
+                        <span class="category-tag technology">
+                            MODALIDAD
+                        </span>
+                        <h3>NOMBRE DE CONFERENCIA</h3>
+                        <p>Ponente: NOMBRE DEL PONENTE</p>
+                    </div>
+                    <div class="location-info">
+                        <strong>CAMPUS</strong>
+                        <span>LUGAR DEL CAMPUS</span>
+                    </div>
+                    <div class="time-info">
+                        <strong>HORA</strong>
+                        <span>DIA</span>
+                    </div>
+                </article>
+                <!-- CONFERENCIA 3 -->
+                <article class="conference-row">
+                    <div class="conference-info">
+                        <span class="category-tag science">
+                            MODALIDAD
+                        </span>
+                        <h3>NOMBRE DE CONFERENCIA</h3>
+                        <p>Ponente: NOMBRE DEL PONENTE</p>
+                    </div>
+                    <div class="location-info">
+                        <strong>CAMPUS</strong>
+                        <span>LUGAR DEL CAMPUS</span>
+                    </div>
+                    <div class="time-info">
+                        <strong>HORA</strong>
+                        <span>DIA</span>
+                    </div>
+                </article>
+                <!-- CONFERENCIA 4 -->
+                <article class="conference-row">
+                    <div class="conference-info">
+                        <span class="category-tag business">
+                            MODALIDAD
+                        </span>
+                        <h3>NOMBRE DE CONFERENCIA</h3>
+                        <p>Ponente: NOMBRE DEL PONENTE</p>
+                    </div>
+                    <div class="location-info">
+                        <strong>CAMPUS</strong>
+                        <span>LUGAR DEL CAMPUS</span>
+                    </div>
+                    <div class="time-info">
+                        <strong>HORA</strong>
+                        <span>DIA</span>
+                    </div>
+                </article>
+                <!-- CONFERENCIA 5 -->
+                <article class="conference-row">
+                    <div class="conference-info">
+                        <span class="category-tag design">
+                            MODALIDAD
+                        </span>
+                        <h3>NOMBRE DE CONFERENCIA</h3>
+                        <p>Ponente: NOMBRE DEL PONENTE</p>
+                    </div>
+                    <div class="location-info">
+                        <strong>CAMPUS</strong>
+                        <span>LUGAR DEL CAMPUS</span>
+                    </div>
+                    <div class="time-info">
+                        <strong>HORA</strong>
+                        <span>DIA</span>
+                    </div>
+                </article>
+                <!-- CONFERENCIA 6 -->
+                <article class="conference-row">
+                    <div class="conference-info">
+                        <span class="category-tag technology">
+                            MODALIDAD
+                        </span>
+                        <h3>NOMBRE DE CONFERENCIA</h3>
+                        <p>Ponente: NOMBRE DEL PONENTE</p>
+                    </div>
+                    <div class="location-info">
+                        <strong>CAMPUS</strong>
+                        <span>LUGAR DEL CAMPUS</span>
+                    </div>
+                    <div class="time-info">
+                        <strong>HORA</strong>
+                        <span>DIA</span>
+                    </div>
+                </article>
+            </div>
+        </section>
+        <!-- PIE DE PAGINA -->
+        <footer class="footer">
+            <p>UniConferencias · Portal de eventos academicos</p>
+        </footer>
+    </main>
+</body>
+</html>
