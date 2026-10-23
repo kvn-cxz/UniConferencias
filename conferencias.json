@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "titulo": "Inteligencia Artificial en la Educación",
+    "ponente": "Dra. María López",
+    "campus": "IIT",
+    "ubicacion": "Auditorio A",
+    "fecha": "2026-11-10",
+    "horaInicio": "10:00",
+    "horaFin": "11:00",
+    "area": "Tecnología",
+    "descripcion": "Conferencia sobre las aplicaciones de la inteligencia artificial en la educación universitaria."
+  },
+  {
+    "id": 2,
+    "titulo": "Innovación y Emprendimiento",
+    "ponente": "Carlos Pérez",
+    "campus": "IADA",
+    "ubicacion": "Sala de Conferencias B",
+    "fecha": "2026-11-11",
+    "horaInicio": "12:00",
+    "horaFin": "13:00",
+    "area": "Negocios",
+    "descripcion": "Análisis de estrategias de innovación y emprendimiento."
+  }
+]

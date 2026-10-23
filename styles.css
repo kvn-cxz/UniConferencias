@@ -344,6 +344,23 @@ a {
 .time-info strong {
     color: var(--primary);
 }
+/*Boton calendario*/
+.outlook-button {
+  display: inline-block;
+  padding: 10px 16px;
+  background-color: #0078d4;
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  transition: background-color 0.2s ease;
+}
+
+.outlook-button:hover {
+  background-color: #005a9e;
+}
+
 /* =========================
    PIE DE PAGINA
 ========================= */
