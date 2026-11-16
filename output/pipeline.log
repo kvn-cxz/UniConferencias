@@ -1,0 +1,29 @@
+2026-11-16 13:47:38 | INFO    | pipeline | === ETAPA 1: CARGA ===
+2026-11-16 13:47:39 | INFO    | pipeline.carga | Archivo cargado: Programa_32IIT_21-09.xlsx
+2026-11-16 13:47:39 | INFO    | pipeline.carga | Diccionario cargado: 12 campos, 17 actividades, 68 salones
+2026-11-16 13:47:39 | INFO    | pipeline | === ETAPA 2: VALIDACIÓN DE CARGA ===
+2026-11-16 13:47:39 | INFO    | pipeline.carga | Validación de carga exitosa: 294 registros, 12 columnas
+2026-11-16 13:47:39 | INFO    | pipeline | === ETAPA 3: VALIDACIÓN DE LAYOUT ===
+2026-11-16 13:47:39 | INFO    | pipeline.layout | Columnas esperadas: 12 | encontradas: 12
+2026-11-16 13:47:39 | INFO    | pipeline.layout | Validación de layout exitosa.
+2026-11-16 13:47:39 | INFO    | pipeline | === ETAPA 4: VALIDACIÓN DE INFORMACIÓN ===
+2026-11-16 13:47:39 | INFO    | pipeline.validacion | Registros con al menos un incumplimiento: 164 de 294
+2026-11-16 13:47:39 | INFO    | pipeline | === ETAPA 5: LIMPIEZA ===
+2026-11-16 13:47:39 | INFO    | pipeline.limpieza | Limpieza: 194 celdas corregidas en 164 registros
+2026-11-16 13:47:39 | INFO    | pipeline.validacion | Registros con al menos un incumplimiento: 1 de 294
+2026-11-16 13:47:39 | INFO    | pipeline | === ETAPA 6: SELECCIÓN ===
+2026-11-16 13:47:39 | INFO    | pipeline.seleccion | Selección: 294 recibidos | 293 aceptados | 1 rechazados | 12 atributos
+2026-11-16 13:47:39 | INFO    | pipeline | === ETAPA 7: TRANSFORMACIÓN ===
+2026-11-16 13:47:39 | INFO    | pipeline.transformacion | Transformación: 293 registros, 16 columnas
+2026-11-16 13:47:39 | INFO    | pipeline | === ETAPA 8: ALMACENAMIENTO ===
+2026-11-16 13:47:39 | INFO    | pipeline.almacenamiento | Guardado y verificado: datos_procesados.xlsx (293 registros)
+2026-11-16 13:47:39 | INFO    | pipeline.almacenamiento | Guardado y verificado: registros_rechazados.xlsx (1 registros)
+2026-11-16 13:47:39 | INFO    | pipeline.almacenamiento | Guardado y verificado: bitacora_limpieza.xlsx (194 registros)
+2026-11-16 13:47:40 | INFO    | pipeline.almacenamiento | Guardado y verificado: reporte_validacion.xlsx
+2026-11-16 13:47:40 | INFO    | pipeline.bd | Guardado y verificado: tabla eventos (293 registros)
+2026-11-16 13:47:40 | INFO    | pipeline.bd | Guardado y verificado: tabla registros_rechazados (1 registros)
+2026-11-16 13:47:40 | INFO    | pipeline.bd | Guardado y verificado: tabla bitacora_limpieza (194 registros)
+2026-11-16 13:47:40 | INFO    | pipeline.bd | Guardado y verificado: tabla reporte_validacion (17 registros)
+2026-11-16 13:47:40 | INFO    | pipeline.bd | Guardado y verificado: tabla incumplimientos_validacion (194 registros)
+2026-11-16 13:47:40 | INFO    | pipeline.almacenamiento | Carga confirmada en PostgreSQL: 5 tablas
+2026-11-16 13:47:40 | INFO    | pipeline | Pipeline terminado: 293 procesados, 1 rechazados. Salidas en 'output'
