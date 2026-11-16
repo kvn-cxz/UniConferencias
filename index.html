@@ -1,122 +1,83 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Conferencias Universitarias</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>UniConferencias | Eventos universitarios</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!-- ENCABEZADO -->
-    <header class="header">
-        <div class="header-container">
+  <header class="header">
+    <div class="header-container">
+      <a href="#" class="logo" aria-label="UniConferencias inicio">
+        <span class="logo-icon">U</span><span>UniConferencias</span>
+      </a>
+      <nav class="navigation" aria-label="Navegación principal">
+        <button class="nav-link active" data-view="conferencias">Conferencias</button>
+        <button class="nav-link" data-view="calendario">Calendario</button>
+        <button class="nav-link" data-view="agenda">Mi agenda <span id="agenda-badge" class="badge">0</span></button>
+      </nav>
+      <a class="login-button" href="#agenda" data-view-link="agenda">Mi agenda</a>
+    </div>
+  </header>
 
-            <a href="#" class="logo">
-                <span class="logo-icon">U</span>
-                <span>UniConferencias</span>
-            </a>
+  <main class="main-container">
+    <section class="hero">
+      <span class="eyebrow">EVENTOS ACADÉMICOS</span>
+      <h1>Encuentra tu próxima conferencia</h1>
+      <p>Explora las conferencias de tu universidad, descubre nuevos temas y organiza tu horario.</p>
+    </section>
 
-            <nav class="navigation">
-                <a href="#" class="nav-link active">Conferencias</a>
-                <a href="#" class="nav-link">Calendario</a>
-                <a href="#" class="nav-link">Mi agenda</a>
-            </nav>
+    <section class="search-section" aria-label="Buscar conferencias">
+      <label for="search" class="search-label">Buscar conferencias</label>
+      <div class="search-box">
+        <span class="search-icon" aria-hidden="true">⌕</span>
+        <input type="search" id="search" placeholder="Busca por nombre, tema o ponente..." autocomplete="off">
+        <button type="button" class="search-button" id="search-button">Buscar</button>
+      </div>
+    </section>
 
-            <button class="login-button" type="button">
-                Iniciar sesion
-            </button>
+    <section class="filters" aria-label="Filtros">
+      <div class="filter-group">
+        <label for="campus">Campus</label>
+        <select id="campus"><option value="">Todos los campus</option></select>
+      </div>
+      <div class="filter-group">
+        <label for="day">Día</label>
+        <select id="day">
+          <option value="">Todos los días</option>
+          <option value="lunes">Lunes</option><option value="martes">Martes</option>
+          <option value="miércoles">Miércoles</option><option value="jueves">Jueves</option>
+          <option value="viernes">Viernes</option><option value="sábado">Sábado</option>
+          <option value="domingo">Domingo</option>
+        </select>
+      </div>
+      <div class="filter-group">
+        <label for="category">Área académica</label>
+        <select id="category"><option value="">Todas las áreas</option></select>
+      </div>
+      <button class="clear-filters" id="clear-filters" type="button">Limpiar filtros</button>
+    </section>
 
-        </div>
-    </header>
-    <!-- CONTENIDO PRINCIPAL -->
-    <main class="main-container">
-        <!-- PRESENTACION -->
-        <section class="hero">
-            <span class="eyebrow">EVENTOS ACADEMICOS</span>
-            <h1>Encuentra tu proxima conferencia</h1>
-            <p>
-                Explora las conferencias de tu universidad,
-                descubre nuevos temas y organiza tu horario.
-            </p>
-        </section>
-        <!-- BUSCADOR -->
-        <section class="search-section">
-            <label for="search" class="search-label">
-                Buscar conferencias
-            </label>
-            <div class="search-box">
-                <span class="search-icon" aria-hidden="true">⌕</span>
-                <input type="search" id="search" placeholder="Busca por nombre, tema o ponente...">
-                <button type="button" class="search-button">Buscar</button>
-            </div>
-        </section>
-        <!-- FILTROS -->
-        <section class="filters">
-            <div class="filter-group">
-                <label for="campus">Campus</label>
-                <select id="campus">
-                    <option value="">Todos los campus</option>
-                    <option value="">IIT</option>
-                    <option value="">IADA</option>
-                    <option value="">ICSA</option>
-                    <option value="">CU</option>
-                </select>
-            </div>
-            <div class="filter-group">
-                <label for="day">Dia</label>
-                <select id="day">
-                    <option value="">Todos los dias</option>
-                    <option value="lunes">Lunes</option>
-                    <option value="martes">Martes</option>
-                    <option value="miercoles">Miercoles</option>
-                    <option value="jueves">Jueves</option>
-                    <option value="viernes">Viernes</option>
-                </select>
-            </div>
-            <div class="filter-group">
-                <label for="category">Area academica</label>
-                <select id="category">
-                    <option value="">Todas las modalidades</option>
-                    <option value="tecnologia">Modalidad...</option>
-                    <option value="negocios">Modalidad...</option>
-                    <option value="ciencias">Modalidad...</option>
-                    <option value="diseno">Modalidad...</option>
-                </select>
-            </div>
-        </section>
-        <!-- LISTA DE CONFERENCIAS -->
-        <section class="conferences-section">
-            <div class="section-heading">
-                <div>
-                    <h2>Conferencias disponibles</h2>
-                    <p>
-                        Consulta los horarios y encuentra
-                        las actividades que te interesan.
-                    </p>
-                </div>
-                <span class="results-count" id="results-count">
-                    0 conferencias
-                </span>
-            </div>
-            <!-- TABLA CON TRES COLUMNAS -->
-            <div class="conference-list">
-                <!-- ENCABEZADOS -->
-                <div class="list-header">
-                    <span>Conferencia</span>
-                    <span>Campus / Ubicacion</span>
-                    <span>Horario</span>
-                </div>
-                <!-- CONTENEDOR DE CONFERENCIAS GENERADAS AUTOMÁTICAMENTE -->
-                <div id="conferencias-container">
-                    <!-- JavaScript insertará aquí todas las conferencias -->
-                </div>
-            </div>
-        </section>
-        <!-- PIE DE PAGINA -->
-        <footer class="footer">
-            <p>UniConferencias · Portal de eventos academicos</p>
-        </footer>
-    </main>
-    <script src="script.js"></script>
+    <section class="conferences-section">
+      <div class="section-heading">
+        <div><h2 id="view-title">Conferencias disponibles</h2><p id="view-subtitle">Consulta los horarios y encuentra las actividades que te interesan.</p></div>
+        <span class="results-count" id="results-count">Cargando…</span>
+      </div>
+      <div id="status" class="status" role="status">Cargando conferencias…</div>
+      <div class="conference-list" id="conference-list">
+        <div class="list-header"><span>Conferencia</span><span>Campus / Ubicación</span><span>Horario</span><span>Acciones</span></div>
+        <div id="conferencias-container"></div>
+      </div>
+    </section>
+
+    <footer class="footer"><p>UniConferencias · Portal de eventos académicos</p></footer>
+  </main>
+
+  <a class="chat-fab" href="/asistente" aria-label="Hablar con el asistente">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 3h16a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H9l-5 4v-4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2zm3 5v2h10V8H7zm0 4v2h7v-2H7z"/></svg>
+    <span>Asistente</span>
+  </a>
+  <script src="script.js"></script>
 </body>
 </html>
